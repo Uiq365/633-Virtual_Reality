@@ -43,14 +43,25 @@
 		animation__position = "property: position; dur: 3000; easing: easeInOutSine; dir: alternate; from:0 1 0; to: 3 2 -4; loop: true"
 		animation__color = "property: material.color; dur: 1000; easing: easeInOutSine; dir: alternate; from:#21a4f3; to:#32caf6; loop: true">
 	</a-sphere>
+
+	<a-torus 
+		radius="0.5" radius-tubular="0.1"
+		position = "2 3 -4"
+		rotation = "0 0 0"
+		color="#8800FF"
+		material = "src: #grid; repeat: 16 8;"
+		shadow = "cast: true; receive: true"
+		animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:30 -20 0; to: 30 -20 360; loop: true">
+	</a-torus>
 	
-	<a-entity 
+	<!-- <a-entity 
 		id='cabinet'
 		position = "2.5 1.5 4"
 		rotation = "0 -45 0"
 		gltf-model="#goku" 
 		scale="0.5 0.5 0.5"
 		color="#FFFFFF"
+		animation_goku = ""
 		shadow="cast: true; receive: true;">
 	</a-entity>
 
@@ -61,8 +72,9 @@
 		gltf-model="#dragon" 
 		scale="0.75 0.75 0.75"
 		color="#FFFFFF"
+		animation_dragon = ""
 		shadow="cast: true; receive: true;">
-	</a-entity>
+	</a-entity> -->
 	
 </a-scene>
 </body>
