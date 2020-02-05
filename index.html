@@ -15,6 +15,7 @@
 		<img id="grid" src="images/border.png" crossorigin="anonymous" />
 		<img id="sky" src="images/stars.jpg" crossorigin="anonymous" />
 		<a-asset-item id="goku" src="models/goku/scene.gltf"></a-asset-item>
+		<a-asset-item id="dragon" src="models/dragon/scene.gltf"></a-asset-item>
 	</a-assets>
 	
 	<a-sky 
@@ -38,6 +39,16 @@
 		rotation = "0 -45 0"
 		gltf-model="#goku" 
 		scale="0.5 0.5 0.5"
+		color="#FFFFFF"
+		shadow="cast: true; receive: true;">
+	</a-entity>
+
+	<a-entity 
+		id='cabinet'
+		position = "10 10 -15"
+		rotation = "0 -90 0"
+		gltf-model="#dragon" 
+		scale="0.75 0.75 0.75"
 		color="#FFFFFF"
 		shadow="cast: true; receive: true;">
 	</a-entity>
