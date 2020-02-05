@@ -32,10 +32,21 @@
 		material="src: #grid; repeat:100 100; transparent: true; opacity: 0.75"
 		shadow="cast: false; receive: true">
 	</a-plane>
+
+	<a-sphere
+		radius = "1.25"
+		position = "0 1.25 -5"
+		color = "#DDBB00"
+		material = "src: #grid; repeat: 32 16;"
+		shadow = "cast: true; receive: true"
+		animation__radius = "property: radius; dur: 1000; easing: easeInOutSine; dir: alternate; from:1.25; to:1.20; loop: true"
+		animation__position = "property: position; dur: 3000; easing: easeInOutSine; dir: alternate; from:0 1 0; to: 3 2 -4; loop: true"
+		animation__color = "property: material.color; dur: 1000; easing: easeInOutSine; dir: alternate; from:#21a4f3; to:#32caf6; loop: true">
+	</a-sphere>
 	
 	<a-entity 
 		id='cabinet'
-		position = "0 0 -5"
+		position = "2.5 1.5 4"
 		rotation = "0 -45 0"
 		gltf-model="#goku" 
 		scale="0.5 0.5 0.5"
@@ -45,7 +56,7 @@
 
 	<a-entity 
 		id='cabinet'
-		position = "10 10 -15"
+		position = "-2.5 1.5 -4"
 		rotation = "0 -90 0"
 		gltf-model="#dragon" 
 		scale="0.75 0.75 0.75"
