@@ -20,11 +20,8 @@
                     rotation="0 0 0"
                     scale=".01 .01 .01"
                     gltf-model="#rose">
-                   <a-animation attribute="scale" dur= "4000" begin="2000" to="1 1 1"></a-animation>
+                   <a-animation attribute="position" dur= "4000" begin="2000" from= "0 0 0" to="360 0 0"></a-animation>
         </a-entity>
-        <a-box position="0 0.5 0" 
-               material="src:#grid; color: grey; transparent: true; opacity: 0.50;">
-        </a-box>
     </a-marker>
     
     <a-entity camera></a-entity>
