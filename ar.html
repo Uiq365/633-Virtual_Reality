@@ -13,21 +13,21 @@
 		<img id="grid" src="images/border.png" />
 		<img id="earth-flat" src="images/earth-flat.jpg" />
 		<img id="earth-sphere" src="images/earth-sphere.jpg" />
-        <img id="fire" src="images/fire.png"/>
+        <img id="fire" src="images/fire.jpg"/>
         <img id="ice" src="images/ice.jpg"/>
 	</a-assets>
     
     <a-marker type="pattern" url="data/kanji.patt">
         <a-box position="0 0.5 0"
                 rotation = "0 45 45"
-               material="src:#ice; opacity: 0.50;"
+               material="src:#ice; opacity: 1;"
                animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: reverse; from:0 0 0; to: 0 360 0; loop: true;">
         </a-box>
     </a-marker>
 
     <a-marker type="pattern" url="data/gh.patt">
         <a-sphere position="0 0.5 0" 
-               material="src: #fire; opacity: 0.95;"
+               material="src: #fire; opacity: 1;"
                animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
         </a-sphere>
     </a-marker>
