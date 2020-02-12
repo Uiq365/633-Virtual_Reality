@@ -13,7 +13,10 @@
 		<img id="grid" src="images/border.png" />
 		<img id="earth-flat" src="images/earth-flat.jpg" />
 		<img id="earth-sphere" src="images/earth-sphere.jpg" />
+        <video id="my-video" src="Fire.mp4" autoplay="true">
 	</a-assets>
+
+</a-scene>
     
     <a-marker type="pattern" url="data/kanji.patt">
         <a-box position="0 0.5 0"
@@ -29,6 +32,14 @@
                animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
         </a-sphere>
     </a-marker>
+
+    <a-marker type="pattern" url="data/hiro.patt">
+        <a-entity geometry="primitive: box"
+            material="src: #my-video">
+        </a-entity>
+    </a-marker>
+
+
     
     <a-entity camera></a-entity>
     
