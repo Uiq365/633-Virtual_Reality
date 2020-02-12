@@ -20,7 +20,16 @@
                     rotation="0 0 0"
                     scale=".01 .01 .01"
                     gltf-model="#rose">
-                   <a-animation attribute="position" dur= "4000" begin="2000" from= "0 0 0" to="360 0 0"></a-animation>
+                   <a-animation attribute="rotation" dur= "4000" begin="2000" from= "0 0 0" to="360 0 0"></a-animation>
+        </a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="data/gh.patt">
+        <a-entity   position="0 3 0" 
+                    rotation="0 0 0"
+                    scale=".01 .01 .01"
+                    gltf-model="#heart">
+                   <a-animation attribute="rotation" dur= "4000" begin="2000" from= "0 0 0" to="360 0 0" dir = "reverse"></a-animation>
         </a-entity>
     </a-marker>
     
