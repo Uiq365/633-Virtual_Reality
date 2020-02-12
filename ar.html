@@ -16,9 +16,18 @@
 	</a-assets>
     
     <a-marker type="pattern" url="data/kanji.patt">
-        <a-box position="0 0.5 0" 
-               material="src:#grid; color: grey; transparent: true; opacity: 0.50;">
+        <a-box position="0 0.5 0"
+                rotation = "0 45 45"
+               material="src:#grid; color: grey; transparent: true; opacity: 0.50;"
+               animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: reverse; from:0 0 0; to: 0 360 0; loop: true;">
         </a-box>
+    </a-marker>
+
+    <a-marker type="pattern" url="data/gh.patt">
+        <a-sphere position="0 0.5 0" 
+               material="src: #earth-sphere; transparent: true; opacity: 0.95;"
+               animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
+        </a-sphere>
     </a-marker>
     
     <a-entity camera></a-entity>
