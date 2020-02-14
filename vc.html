@@ -13,7 +13,8 @@
 			<a href="https://google.com">Goodle</a>
 		</div>
 	<!-- Camera -->
-		<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+	
 	<a-assets>
         <a-asset-item id = "heartEmoji" src = "models/heartEyes/heartEyesEmoji.gltf"></a-asset-item>
         <a-asset-item id = "bear" src = "models/teddy_bear/scene.gltf"></a-asset-item>
@@ -22,7 +23,7 @@
  	</a-assets>
 
  	<!-- Bear Model and Broccoli Marker-->
- 	<a-marker type = "pattern" url = "markers/kanji.patt">
+ 	<a-marker type = "pattern" url = "data/kanji.patt">
         <a-entity 	position = "0 0 0" 
         			rotation = "-90 0 0" 
         			scale = "1 1 1" 
@@ -31,7 +32,7 @@
 	</a-marker>
 
 	<!-- Heart Model and Heart Marker-->
-	<a-marker type = "pattern" url = "markers/star.patt">
+	<a-marker type = "pattern" url = "data/star.patt">
 		<a-entity 	position = "0 0 1" 
 					rotation = "-180 0 0" 
 					scale = "0.5 0.5 0.5" 
@@ -41,7 +42,7 @@
 	</a-marker>
 
 	<!-- Text with Hiro Marker-->
-	<a-marker type = "pattern" url = "markers/hiro.patt">
+	<a-marker type = "pattern" url = "data/hiro.patt">
 		<a-entity 
             text-geometry="value: Happy Valentines Day!!!;"
             material="color: red; repeat: 0.5 0.5;"
