@@ -48,9 +48,25 @@
 		position = "-65 150 -15"
 		color = "FFA500"
 		material = "src: #moon;"
-		shadow = "cast: true; receive: true"
-		animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:30 -20 0; to: 30 -20 360; loop: true">
+		shadow = "cast: true; receive: true">
+		<a-animation 
+				attribute= "color"
+				from="#4CC3D9"
+				to= "#000000"
+				dur= "2000"
+				direction= "alternate"
+				repeat= "1"
+				fill= "forwards"
+				begin="click">
+		</a-animation>
 	</a-sphere>
+
+	<a-box 
+		position = "-1 0.5 -3" 
+		rotation = "0 45 0" 
+		color = #4CC3D9 
+		animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:30 -20 0; to: 30 -20 360; loop: true">
+		</a-box>
 
 	<a-torus 
 		radius="0.5" radius-tubular="0.05"
@@ -72,16 +88,6 @@
 		animation_goku = ""
 		shadow="cast: true; receive: true;">
 	</a-entity>
-
-	<!-- <a-entity 
-		id='cabinet'
-		position = "0 1 -6"
-		rotation = "0 0 0"
-		gltf-model="#dbs" 
-		scale=".01 .01 .01"
-		color="#FFFFFF"
-		shadow="cast: true; receive: true;">
-	</a-entity> -->
 
 	<a-entity 
 		id='cabinet'
