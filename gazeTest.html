@@ -66,9 +66,9 @@
 		rotation = "0 45 0" 
 		color = "#4CC3D9">
 		<a-animation 
-				attribute= "color"
-				from="#4CC3D9"
-				to= "#000000"
+				attribute= "rotation"
+				from="#0 45 0"
+				to= "90 45 180"
 				dur= "2000"
 				direction= "alternate"
 				repeat= "1"
@@ -106,7 +106,15 @@
 		scale="0.001 0.001 0.001"
 		color="#FFFFFF"
 		shadow="cast: true; receive: true;">
-		<a-animation attribute="scale" dur= "4000" begin="2000" to=".1 .1 .1"></a-animation>
+		<a-animation 
+			attribute="scale" 
+			dur= "4000" 
+			begin="2000" 
+			to=".1 .1 .1" 
+			from= "0.001 0.001 0.001" 
+			fill= "forwards" 
+			begin= "click">
+		</a-animation>
 	</a-entity>
 	
 </a-scene>
