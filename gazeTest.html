@@ -26,6 +26,16 @@
 		rotation = "0 0 0"
 		color = "#0000ff"
 		material = "src: #sky">
+		<a-animation 
+				attribute= "material"
+				from="src: #sky"
+				to= "src: #ice"
+				dur= "2000"
+				direction= "alternate"
+				repeat= "1"
+				fill= "forwards"
+				begin="click">
+		</a-animation>
 	</a-sky>
 
 
@@ -111,7 +121,8 @@
 			dur= "4000" 
 			to=".1 .1 .1" 
 			from= "0.001 0.001 0.001" 
-			fill= "forwards" 
+			fill= "forwards"
+			direction="alternate" 
 			begin= "click">
 		</a-animation>
 	</a-entity>
