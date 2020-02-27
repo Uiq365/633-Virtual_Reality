@@ -19,7 +19,7 @@
                         {name:"img 5",type:"image",src:"src9"}];
       
       // Component to change to a sequential color on click.
-      AFRAME.registerComponent('select-gradient', {
+      AFRAME.registerComponent('select-image', {
         init: function () {
           var lastcol={topColor:'#ffffff',middleColor:'#ffffff',bottomColor:'#ffffff'};
           this.el.addEventListener('click', function (evt) {
@@ -49,16 +49,6 @@
               sk.setAttribute('material',{src:"#"+gradcol.src,shader:"flat"});
             }
             
-            // if(gradcol.topColor!=undefined)
-            // {
-            //   sk.setAttribute("material",{shader:"threeColorGradientShader",topColor:lastcol.topColor,bottomColor:lastcol.bottomColor,middleColor:lastcol.middleColor});
-            //   sk.setAttribute("animation__top",{property:'material.topColor',to:gradcol.topColor,startEvents:'startSkyAnim'});
-            //   sk.setAttribute("animation__middle",{property:'material.middleColor',to:gradcol.middleColor,startEvents:'startSkyAnim'});
-            //   sk.setAttribute("animation__bottom",{property:'material.bottomColor',to:gradcol.bottomColor,startEvents:'startSkyAnim'});
-            //   sk.emit("startSkyAnim");
-            //   lastcol={topColor:gradcol.topColor,middleColor:gradcol.middleColor,bottomColor:gradcol.bottomColor};
-            // }
-            
             
           });
           this.el.addEventListener('mouseenter', function (evt) {
@@ -76,7 +66,7 @@
         }
       });
       
-      AFRAME.registerComponent('gradient-platform', {
+      AFRAME.registerComponent('portal-locals', {
         init: function () {
           for(var i=0;i<gradientData.length;i++)
           {
@@ -86,7 +76,7 @@
               mel.setAttribute("id",gradientData[i].name);
               mel.setAttribute("position",{x:-0.6+0.2*i,y:0.05,z:-0.2});
               mel.setAttribute("rotation",{x:-90,y:0,z:0});
-              mel.setAttribute("select-gradient",'');
+              mel.setAttribute("select-image",'');
               
               var col=document.createElement('a-entity');
               col.setAttribute("geometry",{primitive:"circle",radius:0.05});
@@ -118,7 +108,7 @@
         <img id="src8" src="images/ice.jpg" crossorigin="anonymous"/>
         <img id="src9" src="images/earth-sphere.jpg" crossorigin="anonymous"/>
       </a-assets>
-      <a-entity id="plat" gradient-platform position="0 1 -2" rotation="60 0 0" >
+      <a-entity id="plat" portal-locals position="0 1 -2" rotation="60 0 0" >
         <a-entity geometry="primitive: box;height:0.09;width:1.5;depth:0.5"
                   material="shader:flat;color:#f0f0f0" shadow></a-entity>
         <a-entity geometry="primitive:box;height:0.05;width:1.8;depth:0.8"
