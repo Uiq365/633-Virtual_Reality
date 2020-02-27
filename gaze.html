@@ -27,12 +27,21 @@
             
             for(var i=0;i<gradientData.length;i++)
             {
-                if(gradientData[i].type=="image")
+              if(gradientData[i].name==grad)
+              {
+                if(gradientData[i].type=="gradient")
+                {
+                  gradcol={"topColor":gradientData[i].topColor,"bottomColor":gradientData[i].bottomColor,"middleColor":gradientData[i].middleColor};
+                  
+                  console.log(grad,gradcol.topColor);
+                }
+                else if(gradientData[i].type=="image")
                 {
                   gradcol={"src":gradientData[i].src};
                   console.log(grad,gradcol.src);
                 }
                 break;
+              } 
             }
             
             
