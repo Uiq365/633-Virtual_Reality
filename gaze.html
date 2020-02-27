@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Gaze Example</title>
-    <meta name="description" content="Kumar Ahir - VR designer">
+    <meta name="description" content="Addler Pierre-Louis VR Dev">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
@@ -49,15 +49,15 @@
               sk.setAttribute('material',{src:"#"+gradcol.src,shader:"flat"});
             }
             
-            if(gradcol.topColor!=undefined)
-            {
-              sk.setAttribute("material",{shader:"threeColorGradientShader",topColor:lastcol.topColor,bottomColor:lastcol.bottomColor,middleColor:lastcol.middleColor});
-              sk.setAttribute("animation__top",{property:'material.topColor',to:gradcol.topColor,startEvents:'startSkyAnim'});
-              sk.setAttribute("animation__middle",{property:'material.middleColor',to:gradcol.middleColor,startEvents:'startSkyAnim'});
-              sk.setAttribute("animation__bottom",{property:'material.bottomColor',to:gradcol.bottomColor,startEvents:'startSkyAnim'});
-              sk.emit("startSkyAnim");
-              lastcol={topColor:gradcol.topColor,middleColor:gradcol.middleColor,bottomColor:gradcol.bottomColor};
-            }
+            // if(gradcol.topColor!=undefined)
+            // {
+            //   sk.setAttribute("material",{shader:"threeColorGradientShader",topColor:lastcol.topColor,bottomColor:lastcol.bottomColor,middleColor:lastcol.middleColor});
+            //   sk.setAttribute("animation__top",{property:'material.topColor',to:gradcol.topColor,startEvents:'startSkyAnim'});
+            //   sk.setAttribute("animation__middle",{property:'material.middleColor',to:gradcol.middleColor,startEvents:'startSkyAnim'});
+            //   sk.setAttribute("animation__bottom",{property:'material.bottomColor',to:gradcol.bottomColor,startEvents:'startSkyAnim'});
+            //   sk.emit("startSkyAnim");
+            //   lastcol={topColor:gradcol.topColor,middleColor:gradcol.middleColor,bottomColor:gradcol.bottomColor};
+            // }
             
             
           });
@@ -80,31 +80,7 @@
         init: function () {
           for(var i=0;i<gradientData.length;i++)
           {
-            if(gradientData[i].type=="gradient")
-            {
-              var mel = document.createElement('a-entity');
-              mel.setAttribute("id",gradientData[i].name);
-              mel.setAttribute("position",{x:-0.6+0.2*i,y:0.05,z:-0.2});
-              mel.setAttribute("rotation",{x:-90,y:0,z:0});
-              mel.setAttribute("select-gradient",'');
-              
-              var col=document.createElement('a-entity');
-              col.setAttribute("geometry",{primitive:"circle",radius:0.05});
-              col.setAttribute("material",{shader:"flat",color:gradientData[i].topColor});
-              
-              var tex=document.createElement('a-text');
-              tex.setAttribute("value",gradientData[i].name);
-              tex.setAttribute("position",{x:0,y:-0.08,z:0.01});
-              tex.setAttribute("width",1);
-              tex.setAttribute("align","center");
-              tex.setAttribute("color","#0f0f0f");
-              
-              mel.appendChild(col);
-              mel.appendChild(tex);
-              
-              this.el.appendChild(mel);
-            }
-            else
+            if(gradientData[i].type=="image")
             {
               var mel = document.createElement('a-entity');
               mel.setAttribute("id",gradientData[i].name);
