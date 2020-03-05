@@ -6,13 +6,13 @@
     <meta name="description" content="Addler Pierre-Louis VR Dev">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
-    <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+    <script src="https://cdn.rawgit.com/zcanter/aframe-image-sky/master/dist/imagesky.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
-    <script src="https://unpkg.com/@tlaukkan/aframe-three-color-gradient-shader@0.0.1/index.js"></script>
+    <script src="https://unpkg.com/@tlaukkan/aframe-three-color-image-shader@0.0.1/index.js"></script>
     <script>
-      //{name:"grad3",type:"gradient",topColor:"10 255 100",bottomColor:"123 20 18",middleColor}
-      var gradientData=[{name:"img 1",type:"image",src:"src5"},
+      //{name:"grad3",type:"image",topColor:"10 255 100",bottomColor:"123 20 18",middleColor}
+      var imageData=[{name:"img 1",type:"image",src:"src5"},
                        {name:"img 2",type:"image",src:"src6"},
                         {name:"img 3",type:"image",src:"src7"},
                         {name:"img 4",type:"image",src:"src8"},
@@ -27,13 +27,13 @@
             console.log(grad);
             var gradcol={};
             
-            for(var i=0;i<gradientData.length;i++)
+            for(var i=0;i<imageData.length;i++)
             {
-              if(gradientData[i].name==grad)
+              if(imageData[i].name==grad)
               {
-                if(gradientData[i].type=="image")
+                if(imageData[i].type=="image")
                 {
-                  gradcol={"src":gradientData[i].src};
+                  gradcol={"src":imageData[i].src};
                   console.log(grad,gradcol.src);
                 }
                 break;
@@ -68,12 +68,12 @@
       
       AFRAME.registerComponent('portal-locals', {
         init: function () {
-          for(var i=0;i<gradientData.length;i++)
+          for(var i=0;i<imageData.length;i++)
           {
-            if(gradientData[i].type=="image")
+            if(imageData[i].type=="image")
             {
               var mel = document.createElement('a-entity');
-              mel.setAttribute("id",gradientData[i].name);
+              mel.setAttribute("id",imageData[i].name);
               mel.setAttribute("position",{x:-0.6+0.2*i,y:0.05,z:-0.2});
               mel.setAttribute("rotation",{x:-90,y:0,z:0});
               mel.setAttribute("select-image",'');
@@ -83,7 +83,7 @@
               col.setAttribute("material",{shader:"flat",color:"#ffffff"});
               
               var tex=document.createElement('a-text');
-              tex.setAttribute("value",gradientData[i].name);
+              tex.setAttribute("value",imageData[i].name);
               tex.setAttribute("position",{x:0,y:-0.08,z:0.01});
               tex.setAttribute("width",1);
               tex.setAttribute("align","center");
