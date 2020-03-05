@@ -21,7 +21,6 @@
       // Component to change to a sequential color on click.
       AFRAME.registerComponent('select-image', {
         init: function () {
-          var lastcol={topColor:'#ffffff',middleColor:'#ffffff',bottomColor:'#ffffff'};
           this.el.addEventListener('click', function (evt) {
             var grad=this.getAttribute("id");
             console.log(grad);
